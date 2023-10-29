@@ -10,7 +10,7 @@
 
 - name: Download DocumentDb pem file
   ansible.builtin.get_url:
-    url: wget https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
+    url: https://truststore.pki.rds.amazonaws.com/global/global-bundle.pem
    # dest : /app/global-bundle.pem
     dest: /app/rds-combined-ca-bundle.pem
 
