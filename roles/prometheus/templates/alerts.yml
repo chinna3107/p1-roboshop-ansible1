@@ -8,6 +8,7 @@ groups:
           severity: Critical
         annotations:
           summary: Instance Down
+
 #      - alert: CPUUsageHigh
 #        expr: up == 0
 #        for: 1m
