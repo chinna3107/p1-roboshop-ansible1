@@ -32,3 +32,14 @@
     name: nginx
     state: restarted
     enabled: yes
+
+- name: Create Nginx prometheus exporter Directory
+  ansible.builtin.file:
+    path: /opt/nginx_exporter
+    state: directory
+
+- name: Download Exporter
+  ansible.builtin.unarchive:
+    src: https://github.com/nginxinc/nginx-prometheus-exporter/releases/download/v0.11.0/nginx-prometheus-exporter_0.11.0_linux_amd64.tar.gz
+    dest: /opt/nginx_exporter
+    remote_src: yes
