@@ -1,0 +1,3 @@
+- name: Load logstash
+  ansible.builtin.import_tasks: logstash.yml
+  when: elk_component == "logstash"
